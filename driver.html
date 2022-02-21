@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver</title>
+</head>
+
+<body>
+    <div class="Head">
+        <h1>Driver</h1>
+
+        <p>Please Update the following Details.</p>
+        
+        <div class="form"> <div class="right">
+                User Name: <input type="name" id="username" placeholder="userName" /><br><br>
+                Contact Number: <input type="number" id="contact" placeholder="Contact Number" /> <br><br>
+                Licence Number: <input type="number" id="licence" placeholder="licence Number" width="100" /><br><br>
+                Adhar Number: <input type="number" id="adhar" placeholder="Adhar Number" width="100" /><br><br>
+                <div class="bottom">
+                    <button type="submit" onclick="driverUpdate()"> UPDATE </button>
+                </div>
+        </div>
+        <br><br>
+        <div>
+            Enter Your Location: <input type="text" id="location" placeholder="Your Location" width="100"/> 
+            <button type="submit" onclick="yourLocation()" > Search </button>
+
+            <button type="submit" onclick="bookNow()" >Book Now</button>
+        </div>
+    </div>
+    <div class="footer"><a href="./home.html">Home</a></div>
+
+</body>
+<script>
+    function docId(id)
+    {
+        return document.getElementById(id)
+    }
+
+    function driverUpdate() 
+    {
+        if ((docId("licence").value.length == 0) ||
+            (docId("adhar").value.length == 0)) 
+            {
+            alert("Please Update the Details");
+        }
+        else {
+            alert("Updated Successfully");
+        }
+    }
+    function yourLocation()
+    {
+        if (
+            (docId("location").value.length == 0)) 
+            {
+            alert("Please enter your Location");
+        }
+    }
+
+    function bookNow()
+    {
+            alert("You have taken your Booking");
+    }
+</script>
+
+
+
+<style>
+    .footer {
+        text-align: center;
+    }
+
+
+    .Head {
+        text-align: center;
+    }
+</style>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <h1 style="text-align:center">Register Form</h1>
+    <div class="registration">
+        NAME : <input type="text" id="name" width="250" placeholder="Enter the Name"/><br><br>
+        ADDRESS : <input type="text" id ="address" width="250" placeholder="Enter the Address"/><br><br>
+        CONTACT NUMBER : <input type="number" id="number" width="250" placeholder="Enter the Number"/><br><br>
+        EMAIL : <input type="text" id="email" placeholder="Enter The Name"/><br><br>
+        PASSWORD : <input type="password" id="password" placeholder="Password"/><br><br>
+        CONFIRM PASSWORD : <input type="password" id="confirmPassword" placeholder="Confirm Password"/><br><br>
+        Registed in as  <input type="radio" id="radio1" name="logged" value="user" style="width:auto"/> User 
+                            <input type="radio" id="radio2" name="logged" value="driver" style="width:auto"/> Driver
+                            <br>
+        
+    <button type="submit" onclick="register()">Register</button>
+    </div>
+    <div class="footer"><a href="./home.html">Home</a></div>
+</body>
+<!-- Style for the Page -->
+<style>
+    .registration
+    {
+        margin-left: 600px;
+    }
+     .footer{
+        text-align:center;
+    }
+</style>
+<!-- Scripting for the page -->
+<script>
+
+function docId(id)
+    {
+        return document.getElementById(id);
+    }
+
+    function register()
+    {
+        if(
+           (!(docId("email").value.includes("@") && docId("email").value.includes("."))) ||
+           (!(isNaN(docId("name").value))) ||
+           (docId("password").value.length==0) ||
+           (docId("confirmPassword").value.length==0) ||
+           (!(docId("password").value==docId("confirmPassword").value)) ||
+           (docId("number").value.length==0)
+        )
+        {
+            alert("Enter All the Details");
+        }
+        else if(docId("radio1").checked==true){
+        alert("Registered in Successfully");
+        window.open("./login.html");
+        }
+        else if(docId("radio2").checked==true){
+            alert("Registered in Successfully");
+            window.open("./login.html");
+        }
+        else{
+            alert("Please select Registered in as");
+        }
+    }
+
+</script>
+</html>

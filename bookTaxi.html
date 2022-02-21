@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Taxi</title>
+</head>
+
+<body onload="popUp()">
+    <div>
+        <h1 style="text-align:center">BOOK TAXI</h1>
+    </div>
+
+
+    <div class="bookTaxi">
+        
+        <table>
+            <tr>
+                <td>NAME</td>
+                <td><input type="text" id="name" width="250" placeholder="Enter the Name" /></td>
+            </tr>
+            <tr>
+                <td>ADDRESS</td>
+                <td><input type="text" id="address" width="250" placeholder="Enter the Address" /></td>
+            </tr>
+            <tr>
+                <td>CONTACT NUMBER :</td>
+                <td><input type="number" id="number" width="250" placeholder="Enter the Number" /></td>
+            </tr>
+            <tr>
+                <td>Origin From :</td>
+                <td><input type="text" id="pickup" width="1000" placeholder="Origin From" /></td>
+            </tr>
+            <tr>
+                
+                <td>Destination To :</td><td><input type=" text" id="drop" width="1000" placeholder="Destination To" /></td>
+            </tr>
+            <tr>
+                <td>PICK UP Time :</td>
+                <td><input type="time" id="time" width="100" placeholder="Pickup Time" /></td>
+            </tr> 
+
+            <tr style="text-align: center; "><td><button type="Submit" style="margin-left: 100px;" onclick="booknow()">Book Now</button></td></tr>
+
+        </table>
+    </div>
+
+
+
+    <div class="footer"><a href="./home.html">Home</a></div>
+</body>
+<style>
+    .footer
+     { 
+        text-align:center;
+    }
+
+    .bookTaxi {
+        align-items: center;
+        
+        margin-left: 500px;
+        
+    }
+</style>
+<script>
+    function docId(id)
+{
+    return document.getElementById(id);
+}
+    function popUp() {
+        alert("Please Enter The Details to Book Taxi")
+    }
+    function booknow()
+     {
+        
+
+    }
+</script>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+
+<body>
+    <div class="login">
+        <p>
+        <H1>Login</H1>
+        </p>
+        <div class="loginDetail">
+
+            USERNAME
+            <input type="text" id="userName" width="200" placeholder="Please Enter Your Name" /> <br><br>
+
+            PASSWORD
+            <input id="password" type="password" placeholder="Please Enter Your Password " width="200" /><br><br>
+
+            LOGGED in as <input type="radio" id="radio1" name="logged" value="user" style="width:auto" /> User
+            <input type="radio" id="radio2" name="logged" value="driver" style="width:auto" /> Driver
+            <br>
+
+
+            <button type="submit" onclick="bookTaxi()">Login</button>
+
+        </div>
+    </div>
+    <div class="footer"><a href="./home.html">Home</a></div>
+
+</body>
+
+<script>
+    function docId(id) 
+    {
+        return document.getElementById(id);
+    }
+    function bookTaxi() 
+    {
+        if ((docId("userName").value.length == 0) && (!(isNaN(docId("userName").value)))) {
+            docId("userName").style.borderColor = "red";
+            alert("Enter the Username");
+        }
+        else if (docId("password").value.length == 0) {
+            docId("password").style.borderColor = "red";
+            alert("Enter the Password")
+        }
+        else if (docId("radio1").checked == true) {
+            alert("Logged in Successfully");
+            window.open("./bookTaxi.html");
+        }
+        else if (docId("radio2").checked == true) {
+            alert("Logged in Successfully");
+            window.open("./driver.html");
+        }
+        else {
+            alert("Please Select Logged in as");
+        }
+
+
+    }
+
+</script>
+
+<style>
+    .footer {
+        text-align: center;
+
+    }
+
+    .login {
+        text-align: center;
+
+    }
+
+    button {
+        border: 1px solid black;
+        width: 100px;
+        background-color: lightblue;
+    }
+</style>
+
+</html>
